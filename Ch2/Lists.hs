@@ -15,4 +15,14 @@ ignoreLast y = init y
 
 getLength y = length y
 
-extractNElements e ls = take e ls
+-- grab e elements from a list
+extractNElements n ls = take n ls
+
+-- drop some elements from the list
+removeNElements n ls = drop n ls
+
+-- Find biggest and smallest
+minAndMax ls = (minimum ls, maximum ls)
+
+-- Find the product of a list
+prod ls = product ls
