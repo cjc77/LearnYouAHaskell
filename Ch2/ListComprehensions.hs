@@ -12,4 +12,8 @@ boomBangs xs = [ if x < 10 then "Boom!" else "Bang!" | x <- xs, odd x ]
 
 anotherPickyList = [x | x <- [10..20], x /= 13, x /= 15, x /= 19]
 
-cartesian = [ x * y | x <- [2, 5, 10], y <- [8, 10, 11]]
+cartesian = [ x * y | x <- [2, 5, 10], y <- [8, 10, 11] ]
+
+findLength xs = sum [ 1 | _ <- xs ]
+
+removeLowerCase str = [ c | c <- str, c `elem` ['A'..'Z'] || c `elem` [' ', '.', ',']]
