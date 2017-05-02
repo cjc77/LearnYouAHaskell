@@ -16,4 +16,6 @@ cartesian = [ x * y | x <- [2, 5, 10], y <- [8, 10, 11] ]
 
 findLength xs = sum [ 1 | _ <- xs ]
 
-removeLowerCase str = [ c | c <- str, c `elem` ['A'..'Z'] || c `elem` [' ', '.', ',']]
+removeLowerCase str = [ c | c <- str, c `elem` ['A'..'Z'] || c `elem` [' ', '.', ',', '-']]
+
+removeOdds xxs = [ [x | x <- xs, even x] | xs <- xxs]
