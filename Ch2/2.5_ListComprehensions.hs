@@ -14,6 +14,12 @@ anotherPickyList = [x | x <- [10..20], x /= 13, x /= 15, x /= 19]
 
 cartesian = [ x * y | x <- [2, 5, 10], y <- [8, 10, 11] ]
 
+-- Cartesian product of 2 input lists
+uDefCartesian xs ys = [x * y | x <- xs, y <- ys]
+
+-- Even values of the cartesian product of 2 input lists
+uDefEvenCartesian xs ys = [x * y | x <- xs, y <- ys, (x * y) `mod` 2 == 0]
+
 findLength xs = sum [ 1 | _ <- xs ]
 
 removeLowerCase str = [ c | c <- str, c `elem` ['A'..'Z'] || c `elem` [' ', '.', ',', '-']]
