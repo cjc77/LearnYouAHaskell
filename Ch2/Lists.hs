@@ -1,6 +1,12 @@
 -- Just some numbers
 someNums = [1, 2, 3]
 
+-- Silly Function to test subscript
+subTest x xs = xs !! x
+
+-- Snag the white space at 1,3,5 if you want. Or grab a letter
+whiteSpace x = "a b c " !! x
+
 -- First Item in List
 findHead y = head y
 
