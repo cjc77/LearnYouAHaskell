@@ -15,7 +15,7 @@ calcBMis :: (RealFloat a) => [(a,a)] -> [a]
 calcBMis xs = [bmi | (w,h) <- xs, let bmi = w / h ^ 2]
 
 
--- Check list of pairs to see if some pairs are repeats of others
+-- Check list of pairs to see if x == y
 determineSame :: (Eq a) => [(a,a)] -> [Bool]
 determineSame xs = [eq | (x,y) <- xs, let eq = (x == y)]
 
